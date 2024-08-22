@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+    background-color:  aquamarine;
+padding: 0px;
+margin: 0;
+box-sizing: border-box;
+
+}
+.nav{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+h1{
+position: absolute;
+left: 2%;   
+}
+span{
+position: absolute;
+top:4%;
+left: 3%;
+}
+h3{
+text-decoration: underline;
+position: absolute;
+top:7%;
+left: 2%;
+color:orangered;
+}
+#data{
+position: absolute;
+top:15%;
+left: 3%;
+
+}
+
+#profit{
+
+    width: 315px;
+    height: 48px;
+    border-radius: 5px;
+    
+}
+#rate{
+    
+width: 315px;
+height: 48px;
+border-radius: 5px;
+
+}
+#time{    
+width: 315px;
+height: 48px;
+border-radius: 5px;
+}
+#result{
+    
+border-width: 0px;
+width: 4234px;
+height: 48px;
+border-radius: 5px;
+position: absolute;
+top:5px;
+left: 160%;
+background-color:bisque;
+
+}
+button{
+    color: brown;
+    width:42%;
+    height: 48px;
+    border-radius: 5px;
+    position: absolute;
+    top:110%;
+    left: 3%
+    
+    }
+button:hover{
+   background-color:red;
+   transition: 3s;
+   color:  blue;
+}
+
+    </style>
+</head>
+
+
+<body>
+<div class="nav">
+  <H1> SI</H1><span>calculator</span>
+  <h3>CALCULATE YOUR SIMPLE INTEREST HERE</h3>
+  <div id="data">
+<h2>profit:</h2><br>
+<input type="text" id="profit"><br><br>
+<h2>rate(%):</h2><br>
+    <input type="text" id="rate"><br><br>
+<h2>time(in years):</h2><br>
+    <input type="text" id="time"> 
+   <input id="result">
+<button onclick="simpleinterest()">CALCULATE HERE</button>
+</div>
+</div>
+
+
+
+<script >
+    function simpleinterest() {
+    let profit=Number(document.getElementById('profit').value)
+    let rate=Number(document.getElementById('rate').value)
+    let time=Number(document.getElementById('time').value)
+    let SI=(profit*rate)/100*time;
+    let amount=SI+profit;
+    document.getElementById('result').value=`your simple interest is ${SI}
+   And your amount is ${amount}`;   
+}
+</script>
+
+
+</body>
+</html>

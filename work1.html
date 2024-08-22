@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            size-adjust: 100%;
+        }
+        #result{
+            width: 42%;
+            height: 400%;
+            color:
+             blue;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            
+        
+    }
+    
+    </style>
+</head >
+<body>
+    <video controls height="40px" width="5o%">
+        <source src="SECRET CIRCLE S01E01.mp4">
+    </video>
+    <textarea id="result" disabled></textarea><br>
+   <input type="text" id="word"><button onclick="add()">&rAarr; </button>
+   <script>
+    function add(){
+       
+        let input=document.getElementById('word').value;
+        let results=document.createElement('result');
+        document.getElementById('result').value=input;
+
+    }
+   </script>
+</body>
+</html>
